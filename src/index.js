@@ -28,7 +28,7 @@ class ToZipWebpackPlugin {
           this.getFileName(defaultFileName) || this.options.fileName)
       : this.options.fileName;
     this.options.source = isString(source) ? source : "";
-    isArray(deleteFileList) && this.delete(deleteFileList);
+    this.options.deleteFileList = deleteFileList;
     this.options.archive = archive;
     this.options.log = log;
   }
@@ -51,6 +51,8 @@ class ToZipWebpackPlugin {
       (complition, callback) => {
         this.options.archive && doArchive(this.options); //压缩前的压缩操作
         outputArchive(this.options, complition.options.output.path);
+        isArray(this.options.deleteFileList) &&
+          this.delete(this.options.deleteFileList);
         callback();
       }
     );

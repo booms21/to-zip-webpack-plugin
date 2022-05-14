@@ -1,7 +1,7 @@
 {
   "name": "to-zip-webpack-plugin",
   "version": "1.0.1",
-  "description": "This webpack plugin can automatically zip/rar the webpack output.path, and can customize the compressed source and compressed log",
+  "description": "A simple and easy-to-use webpack compression plugin that can automatically zip/rar the output.path configured by webpack after packaging, and can customize the compression source, generate compression logs, and automatically generate multiple types of unique file names",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/booms21/to-zip-webpack-plugin"
   },
-  "author": "naje",
+  "author": "naje2@foxmail.com",
   "license": "ISC",
   "devDependencies": {
     "archiver": "^5.3.1",
