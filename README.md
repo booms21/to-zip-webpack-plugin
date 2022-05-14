@@ -3,7 +3,7 @@
 
 <h2 align="center">安装</h2>
 
-NPM:https://www.npmjs.com/package/to-zip-webpack-plugin
+**NPM : https://www.npmjs.com/package/to-zip-webpack-plugin**
 
 
 ```bash
@@ -51,14 +51,17 @@ module.exports = {
       }),
     ]
 ```
+
+
 **打包后看到`ToZipWebpackPlugin.log`以下输出说明压缩完成：**
+
 
 ```log
 [2022-05-14T20:05:52.028] [INFO] ToZipWebpackPlugin - Compression finish ！ -  /Users/wsp/vuetest/bundlejs.zip  Size: 0.00M
 [2022-05-14T20:05:52.171] [INFO] ToZipWebpackPlugin - Compression finish ！ -  /Users/wsp/vuetest/497bfd78-7da6-45ab-97b3-0d126981bfcd.zip  Size: 0.21M
 ```
 
-设置defaultFileName会自动生成唯一的压缩文件名支持uuid、时间戳、时间字符串yyyymmddhhMMss:
+设置`defaultFileName`会自动生成唯一的压缩文件名支持**uuid、时间戳、时间字符串 格式yyyymmddhhMMss**:
 
 
 ```js
@@ -73,7 +76,7 @@ module.exports = {
 ```
 
 
-ToZipWebpackPlugin.log：
+**ToZipWebpackPlugin.log**
 
 defaultFileName: "timestamp"
 
@@ -90,5 +93,4 @@ defaultFileName: "time"
 ```
 
 
-内部压缩操作发生在`webpack`的`compiler`引擎`afterEmit`钩子
-hook详情：https://webpack.docschina.org/api/compiler-hooks/#afteremit
+内部压缩操作发生在`webpack`的`compiler`引擎`afterEmit`钩子，hook详情：https://webpack.docschina.org/api/compiler-hooks/#afteremit
