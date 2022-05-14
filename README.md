@@ -1,8 +1,8 @@
 # to-zip-webpack-plugin
-这个 webpack 插件 可以自动对webpack output.path进行zip/rar压缩,并且可以自定义压缩源、压缩日志
+一个简单易用的 `webpack` 压缩插件，在打包后可以自动对`webpack`配置的`output.path`进行`zip/rar`压缩,并且可以自定义压缩源、生成压缩日志、自动生成多种类型的唯一文件名
 
 
-安装
+<h2 align="center">安装</h2>
 
 ```bash
 npm i --save-dev to-zip-webpack-plugin
@@ -24,9 +24,10 @@ module.exports = {
   ]
 }
 ```
-支持零配置，默认对webpack打包完成后的出口资源配置output.path进行压缩到path同级目录。
+支持零配置，默认对webpack打包完成后output.path进行压缩到path同级目录。
 
-同时支持多个参数：
+<h2 align="center">例子</h2>
+同时支持多个可选参数：
 ```js
     plugins: [
       new ToZipWebpackPlugin({
@@ -44,6 +45,11 @@ module.exports = {
         zlibLevel: 9, //设置压缩等级
       }),
     ]
+```
+打包后看到控制台以下输出说明压缩完成：
+```
+Compression finish ！ -  /Users/wsp/vuetest/bundlejs.zip  Size: 0.00M
+Compression finish ！ -  /Users/wsp/vuetest/497bfd78-7da6-45ab-97b3-0d126981bfcd.zip  Size: 0.21M
 ```
 内部压缩操作发生在webpack compiler引擎afterEmit钩子
 hook详情：https://webpack.docschina.org/api/compiler-hooks/#afteremit
