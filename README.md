@@ -36,7 +36,7 @@ module.exports = {
 ```js
     plugins: [
       new ToZipWebpackPlugin({
-        deleteFileList: ["./last.zip", "/dist"], //在output打包完成后删除deleteFileList中的文件夹或目录
+        deleteFileList: ["./last.zip", "/dist"], //在压缩完成后删除deleteFileList中的文件夹或目录
         format: "zip", //要压缩的格式 支持zip、tar  默认zip
         fileName: "test", //压缩文件名 默认自动生成时间字符串文件名
         defaultFileName: "uuid", //当不设置fileName 时会自动生成文件名，支持uuid  timestamp time
