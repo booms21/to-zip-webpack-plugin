@@ -1,5 +1,5 @@
 # to-zip-webpack-plugin
-**一个简单易用的 `webpack` 压缩插件，在打包后可以自动对`webpack`配置的`output.path`进行`zip/rar`压缩,并且可以自定义压缩源、生成压缩日志、自动生成多种类型的唯一文件名**
+**一个简单易用的 `webpack` 压缩插件，在打包后可以自动对`webpack`配置的`output.path`进行`zip/tar`压缩,并且可以自定义压缩源、生成压缩日志、自动生成多种类型的唯一文件名**
 
 <h2 align="center">安装</h2>
 
